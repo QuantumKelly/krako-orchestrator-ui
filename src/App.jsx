@@ -34,7 +34,7 @@ function App() {
   const reconnectTimeoutRef = useRef(null);
 
   // Connection config
-  const ORCHESTRATOR_URL = 'ws://localhost:3010';
+  const ORCHESTRATOR_URL = import.meta.env.VITE_ORCHESTRATOR_URL || 'ws://localhost:3010';
   const FALLBACK_URL = 'ws://localhost:3060';
 
   const addLog = (message) => {
